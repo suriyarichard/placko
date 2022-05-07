@@ -26,14 +26,14 @@
     <!-- Landing -->
     <section class="landing">
       <div class="landing-text">
-        <h1>Hello, I'am placko</h1>
-        <p>Your personal health assistant.</p>
+        <h1>Hello, I'am Placko</h1>
+        <p>Your personal environment assistant.</p>
         <a @click="launchPopup" class="btn btn-lg">Launch now</a>
       </div>
       <div class="landing-image">
         <img
           class="doctor_illustration"
-          src="../assets/doc_home.gif"
+          src="../assets/bottle.gif"
           alt="Working Illustration"
         />
       </div>
@@ -74,6 +74,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+a {
+  text-decoration: none;
+}
 .landing-text {
   margin-bottom: 80px;
 }
@@ -350,7 +353,7 @@ main {
   color: #ffffff;
   background: linear-gradient(to right, #4d4d4d 0, white 10%, #4d4d4d 20%);
   background-position: 0;
-  // -webkit-background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shine 3s infinite linear;
   animation-fill-mode: forwards;
