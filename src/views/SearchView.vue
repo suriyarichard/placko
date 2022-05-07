@@ -3,7 +3,7 @@
     <header class="header">
       <div class="container flex-between">
         <div class="logo">
-          <a href="#">
+          <a href="/">
             <h1>Placko</h1>
           </a>
         </div>
@@ -13,8 +13,8 @@
           </div>
           <div class="nav-buttons">
             <a href="#" class="log-in"> </a>
-            <a href="#" class="sign-up btn btn-sm" @click="launchPopup"
-              >Launch Now</a
+            <a href="/search" class="sign-up btn btn-sm" @click="launchPopup"
+              >Search Places</a
             >
           </div>
         </nav>
@@ -197,7 +197,8 @@ main {
 }
 
 .btn.btn-sm {
-  padding: 7px 21px;
+  padding: 12px;
+
 }
 
 .btn.btn-lg {

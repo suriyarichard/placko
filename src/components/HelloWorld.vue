@@ -13,8 +13,8 @@
           </div>
           <div class="nav-buttons">
             <a href="#" class="log-in"> </a>
-            <a href="#" class="sign-up btn btn-sm" @click="launchPopup"
-              >Launch Now</a
+            <a href="/search" class="sign-up btn btn-sm" @click="launchPopup"
+              >Search Places</a
             >
           </div>
         </nav>
@@ -33,7 +33,7 @@
       <div class="landing-image">
         <img
           class="doctor_illustration"
-          src="../assets/bottle.gif"
+          src="../assets/bottle-wt-bg.gif"
           alt="Working Illustration"
         />
       </div>
@@ -51,7 +51,7 @@
 <script>
 import chatWindow from "./chatWindow.vue";
 export default {
-  name: "helloWorld",
+  name: "helloWorld" ,
   components: {
     chatWindow,
   },
@@ -82,9 +82,8 @@ a {
 }
 main {
   background-image: url("../assets/Bg.svg");
-  height: 100vh;
+  height: 110vh;
   width: 100vw;
-  overflow: hidden;
 }
 .btn {
   display: inline-block;
