@@ -90,7 +90,7 @@ export default {
     };
   },
   created() {
-    this.userMsg = "Hai, Dr.Bot";
+    this.userMsg = "Hai,Placko";
     this.sendMessage();
   },
   methods: {
