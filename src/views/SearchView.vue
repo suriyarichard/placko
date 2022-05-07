@@ -24,14 +24,20 @@
       </div>
     </header>
 
-    <form action="">
         <div class="search">
-          <input type="text" name="beachName" id="search-input" placeholder="Search for a beach">
+          <vue-google-autocomplete
+            ref="address"
+            id="map"
+            classname="form-control"
+            placeholder="Please type your address"
+            v-on:placechanged="getAddressData"
+            country="us"
+          >
+          </vue-google-autocomplete>
           <button type="submit">
             <img src="../assets/search-image.png" alt="" class="search-icon">
           </button>
         </div>
-    </form>
 
     <div class="search-results">
       <div class="cards--">
@@ -57,8 +63,35 @@
 </template>
 
 <script>
+  import VueGoogleAutocomplete from "vue-google-autocomplete";
 
+  export default {
+    components: { VueGoogleAutocomplete },
 
+    data: function () {
+      return {
+        address: "",
+      };
+    },
+
+    mounted() {
+      // To demonstrate functionality of exposed component functions
+      // Here we make focus on the user input
+      this.$refs.address.focus();
+    },
+
+    methods: {
+      /**
+       * When the location found
+       * @param {Object} addressData Data of the found location
+       * @param {Object} placeResultData PlaceResult object
+       * @param {String} id Input container ID
+       */
+      getAddressData: function (addressData) {
+        this.address = addressData;
+      },
+    },
+  };
 </script>
 
 <style lang="scss" scoped> 
@@ -122,7 +155,7 @@
     width:50px;
     height: 100%;
   }
-  #search-input {
+  #map {
     padding:8px;
     width: 100%;
     border:none;
