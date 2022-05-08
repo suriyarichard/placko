@@ -13,7 +13,7 @@
           </div>
           <div class="nav-buttons">
             <a href="#" class="log-in"> </a>
-            <a href="/search" class="sign-up btn btn-sm" @click="launchPopup"
+            <a href="/search" class="sign-up btn btn-sm"
               >Search Places</a
             >
           </div>
@@ -28,7 +28,7 @@
       <div class="landing-text">
         <h1>Hello, I'am Placko</h1>
         <p>Your personal environment assistant.</p>
-        <a @click="launchPopup" class="btn btn-lg">Launch now</a>
+        <a href="#map" class="btn btn-lg">check down</a>
       </div>
       <div class="landing-image">
         <img
@@ -70,10 +70,21 @@ export default {
       console.log("launchPopup", this.cw);
     },
   },
+  mounted (){
+    (function(d, m){
+        var kommunicateSettings = 
+            {"appId":"1181a0b83a265bec89a9fcdcfc3bacfc1","popupWidget":true,"automaticChatOpenOnNavigation":true};
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+   },
 };
 </script>
 
 <style lang="scss" scoped>
+  
 a {
   text-decoration: none;
 }
@@ -84,6 +95,7 @@ main {
   background-image: url("../assets/Bg.svg");
   height: 110vh;
   width: 100vw;
+  scroll-behaviour:smooth;
 }
 .btn {
   display: inline-block;

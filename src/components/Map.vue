@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="map">
         <iframe frameborder="0" src="https://www.google.com/maps/d/u/0/embed?mid=1gdlC2ENCwtn1fLWJIe-7uwI3tYBCtazq&ehbc=2E312F" width="640" height="480" ></iframe>
     </div>
 </template>
@@ -26,7 +26,7 @@ iframe{
 
 
 
-     
+
 }
 
 </style>
